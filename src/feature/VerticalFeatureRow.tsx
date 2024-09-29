@@ -1,5 +1,6 @@
+'use client'
 import className from 'classnames';
-import { useRouter } from 'next/router';
+import { useRouter } from 'next/navigation';
 
 type IVerticalFeatureRowProps = {
   title: string;
@@ -30,7 +31,7 @@ const VerticalFeatureRow = (props: IVerticalFeatureRowProps) => {
       </div>
 
       <div className="w-full p-6 sm:w-1/2">
-        <img src={`${router.basePath}${props.image}`} alt={props.imageAlt} />
+        <img src={`${props.image}`} alt={props.imageAlt} />
       </div>
     </div>
   );
