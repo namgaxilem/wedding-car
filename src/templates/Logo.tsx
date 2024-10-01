@@ -1,11 +1,7 @@
 import Image from "next/image";
 import { AppConfig } from "../utils/AppConfig";
 
-type ILogoProps = {
-  xl?: boolean;
-};
-
-const Logo = ({ xl }: ILogoProps) => {
+const Logo = () => {
   return (
     <span
       className={`inline-flex items-center text-gray-900 font-semibold xl:text-2xl md:text-xl text-base gap-1 max-h-full`}
