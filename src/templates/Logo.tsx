@@ -5,21 +5,18 @@ type ILogoProps = {
   xl?: boolean;
 };
 
-const Logo = (props: ILogoProps) => {
-  const size = props.xl ? "44" : "32";
-  const fontStyle = props.xl
-    ? "font-semibold text-3xl"
-    : "font-semibold text-xl";
-
+const Logo = ({ xl }: ILogoProps) => {
   return (
-    <span className={`inline-flex items-center text-gray-900 ${fontStyle}`}>
+    <span
+      className={`inline-flex items-center text-gray-900 font-semibold xl:text-2xl md:text-xl text-base gap-1 max-h-full`}
+    >
       <Image
         src={"/assets/images/logo.png"}
-        width={100}
-        height={50}
-        alt="asd"
+        width={90}
+        height={90}
+        alt="Logo"
+        className="max-h-full md:h-[90px] md:w-[90px] h-[75px] w-[75px]"
       />
-
       {AppConfig.site_name}
     </span>
   );
