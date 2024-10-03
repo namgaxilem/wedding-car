@@ -1,3 +1,6 @@
+import { Footer } from "@/templates/Footer";
+import { Hero } from "@/templates/Hero";
+import { NextUIProvider } from "@nextui-org/react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
@@ -28,7 +31,17 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
-        {children}
+        <NextUIProvider>
+          <div className="text-gray-600 antialiased">
+            <Hero />
+            {/* <VerticalFeatures /> */}
+            {/* <HomeCarousel /> */}
+            {/* <Banner /> */}
+            {/* <SuggestService /> */}
+            {children}
+            <Footer />
+          </div>
+        </NextUIProvider>
       </body>
     </html>
   );

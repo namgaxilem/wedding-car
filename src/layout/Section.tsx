@@ -5,16 +5,15 @@ type ISectionProps = {
   description?: string;
   yPadding?: string;
   children: ReactNode;
-  style?: React.CSSProperties;
-  fullscreen?: boolean
+  fullscreen?: boolean;
+  className?: string;
 };
 
 const Section = (props: ISectionProps) => (
   <div
-    className={`mx-auto ${!props.fullscreen && 'max-w-screen-lg'} px-3 ${
+    className={`mx-auto ${!props.fullscreen && "max-w-screen-lg"} px-3 ${
       props.yPadding ? props.yPadding : "py-16"
-    }`}
-    style={props.style}
+    } ${props.className}`}
   >
     {(props.title || props.description) && (
       <div className="mb-12 text-center">
