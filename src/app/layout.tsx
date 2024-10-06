@@ -34,10 +34,6 @@ export default function RootLayout({
         <NextUIProvider>
           <div className="text-gray-600 antialiased">
             <Hero />
-            {/* <VerticalFeatures /> */}
-            {/* <HomeCarousel /> */}
-            {/* <Banner /> */}
-            {/* <SuggestService /> */}
             {children}
             <Footer />
           </div>
