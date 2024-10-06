@@ -9,25 +9,24 @@ import {
   ModalHeader,
   useDisclosure,
 } from "@nextui-org/react";
-import { span } from "framer-motion/client";
 import Link from "next/link";
 
 const headerMenuItems = [
   {
-    title: "Xe cưới yêu thích",
-    path: "/dich-vu/xe-cuoi-yeu-thich",
+    title: "Xe cưới",
+    path: "/dich-vu/xe-cuoi",
   },
   {
-    title: "Xe cưới mui trần",
-    path: "/dich-vu/xe-cuoi-mui-tran",
+    title: "Xe dịch vụ",
+    path: "/dich-vu/xe-dich-vu",
   },
   {
-    title: "Xe cưới vip",
-    path: "/dich-vu/xe-cuoi-vip",
+    title: "Blog",
+    path: "/blog/",
   },
   {
-    title: "Mẫu hoa cưới",
-    path: "/dich-vu/mau-hoa-cuoi",
+    title: "Giới thiệu",
+    path: "/gioi-thieu",
   },
 ];
 
