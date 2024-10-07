@@ -4,6 +4,7 @@ import { NextUIProvider } from "@nextui-org/react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import "./globals.css";
+import ZaloChatButton from "./_views/ZaloChatButton";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -36,6 +37,7 @@ export default function RootLayout({
             <Hero />
             {children}
             <Footer />
+            <ZaloChatButton />
           </div>
         </NextUIProvider>
       </body>
