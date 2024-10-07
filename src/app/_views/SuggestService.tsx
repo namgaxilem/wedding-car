@@ -14,9 +14,10 @@ export default function SuggestService() {
               alt=""
             />
           </a>
-          <div className="p-5 flex flex-col justify-between items-start h-[161px]">
+          <div className="p-5 flex flex-col justify-between items-start h-[180px]">
             <p className="mb-3 font-normal text-gray-700">
-              Xe hoa BMW 320i trắng. BMW 320i đời mới sẵn sàng phục vụ CD-CR
+              Dịch vụ xe The Wedding Car mang đến sự sang trọng, tiện nghi và an
+              toàn cho ngày cưới của bạn.
             </p>
             <a
               href="#"
@@ -49,10 +50,10 @@ export default function SuggestService() {
               alt=""
             />
           </a>
-          <div className="p-5 flex flex-col justify-between items-start h-[161px]">
+          <div className="p-5 flex flex-col justify-between items-start h-[180px]">
             <p className="mb-3 font-normal text-gray-700">
-              xe Vinfast 2020. xe hoa Vinfast Lux A giá rẻ, nhiều mẫu hoa vải
-              trang trí MIỄN PHÍ theo xe.
+              Với đội ngũ lái xe chuyên nghiệp, xe được trang trí tinh tế, đảm
+              bảo mỗi hành trình trở nên hoàn hảo và đáng nhớ
             </p>
             <a
               href="#"
@@ -85,10 +86,10 @@ export default function SuggestService() {
               alt=""
             />
           </a>
-          <div className="p-5 flex flex-col justify-between items-start h-[161px]">
+          <div className="p-5 flex flex-col justify-between items-start h-[180px]">
             <p className="mb-3 font-normal text-gray-700">
-              xe Mercedes C250. Mer C250 phiên bản Exclusive lịch lãm và sang
-              trọng.
+              Khách hàng còn được tùy chọn các dòng xe cao cấp, giúp tôn vinh
+              không gian lễ cưới. Đăng ký ngay để trải nghiệm sự khác biệt!
             </p>
             <a
               href="#"
