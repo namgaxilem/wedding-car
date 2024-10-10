@@ -62,7 +62,10 @@ export default function CarList({ initUrl }: Props) {
                   <Image
                     alt="Hinh anh xe"
                     className="object-cover rounded-xl"
-                    src={`${BASE_API_URL}/${e.thong_tin_xe_common?.hinh_xe_dai_dien?.formats?.thumbnail?.url}`}
+                    src={`${BASE_API_URL}/${e.thong_tin_xe_common?.hinh_xe_dai_dien?.formats?.thumbnail?.url}`.replace(
+                      "//",
+                      "/"
+                    )}
                     width={270}
                   />
                 </CardBody>
