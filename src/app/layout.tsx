@@ -33,7 +33,7 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NextUIProvider>
-          <div className="text-gray-600 antialiased">
+          <div className="antialiased">
             <Hero />
             {children}
             <Footer />

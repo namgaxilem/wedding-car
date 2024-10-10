@@ -6,7 +6,7 @@ import { Background } from "../background/Background";
 import { Section } from "../layout/Section";
 
 const Hero = () => (
-  <Background>
+  <Background className="shadow-sm text-gray-600">
     <div className="bg-gray-100">
       <Section yPadding="py-0">
         <div className="flex gap-10 flex-row-reverse py-1 md:text-sm text-xs">

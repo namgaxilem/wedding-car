@@ -1,9 +1,10 @@
 "use client";
+import { BASE_API_URL } from "@/config/config";
 import axios from "axios";
 
 export const axiosInstance = axios.create({
   headers: {},
-  baseURL: process.env.NEXT_PUBLIC_API_BASE_URL
+  baseURL: BASE_API_URL
 });
 
 axiosInstance.defaults.withCredentials = true;
