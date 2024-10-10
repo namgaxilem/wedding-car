@@ -9,7 +9,7 @@ import { Logo } from "./Logo";
 import { SOCIAL_NETWORK } from "@/utils/constants";
 
 const Footer = () => (
-  <Background color="bg-gray-100">
+  <Background className="bg-gray-100">
     <Section>
       <CenteredFooter
         logo={<Logo />}
