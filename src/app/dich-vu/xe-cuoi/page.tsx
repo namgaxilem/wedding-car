@@ -8,7 +8,7 @@ export default function Page() {
         THUÊ XE HOA - XE CƯỚI CHUYÊN NGHIỆP
       </h1>
 
-      <CarList initUrl="/api/xe-cuois" />
+      <CarList initApiUrl="/api/xe-cuois" />
     </Section>
   );
 }

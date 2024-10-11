@@ -3,7 +3,7 @@ import { Hero } from "@/templates/Hero";
 import { NextUIProvider } from "@nextui-org/react";
 import type { Metadata } from "next";
 import localFont from "next/font/local";
-import "./globals.css";
+import "./globals.scss";
 import ZaloChatButton from "./_views/ZaloChatButton";
 
 const geistSans = localFont({

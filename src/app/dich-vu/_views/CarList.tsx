@@ -11,12 +11,15 @@ import {
   Image,
   Spinner,
 } from "@nextui-org/react";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
+type init_api_url = "/api/xe-cuois" | "/api/xe-dich-vus";
 interface Props {
-  initUrl: string;
+  initApiUrl: init_api_url;
 }
-export default function CarList({ initUrl }: Props) {
+export default function CarList({ initApiUrl: initUrl }: Props) {
   const [loading, setLoading] = useState(false);
   const [cars, setCars] = useState<Car[]>();
   const [pagination, setPagination] = useState({
@@ -25,6 +28,7 @@ export default function CarList({ initUrl }: Props) {
     pageCount: 1,
     total: 0,
   });
+  const location = usePathname();
 
   useEffect(() => {
     loadCars();
@@ -39,7 +43,6 @@ export default function CarList({ initUrl }: Props) {
       .then(({ meta, data }: any) => {
         setPagination(meta);
         setCars(data);
-        console.log("data", data);
       })
       .finally(() => setLoading(false));
   };
@@ -57,27 +60,29 @@ export default function CarList({ initUrl }: Props) {
         <>
           <div className="grid lg:grid-cols-4 md:grid-cols-3 grid-cols-2  gap-4">
             {cars?.map((e) => (
-              <Card className="py-4 cursor-pointer" shadow="sm" key={e.id}>
-                <CardBody className="overflow-visible py-2">
-                  <Image
-                    alt="Hinh anh xe"
-                    className="object-cover rounded-xl"
-                    src={`${BASE_API_URL}${e.thong_tin_xe_common?.hinh_xe_dai_dien?.formats?.thumbnail?.url}`}
-                    width={270}
-                  />
-                </CardBody>
-                <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
-                  <h4 className="font-bold text-large">
-                    {e.thong_tin_xe_common.ten_xe}
-                  </h4>
-                  <p className="text-tiny uppercase font-bold">
-                    {e.thong_tin_xe_common.gia_thue_theo_gio}/giờ
-                  </p>
-                  <small className="text-default-500">
-                    {e.thong_tin_xe_common.so_cho_ngoi} chỗ
-                  </small>
-                </CardHeader>
-              </Card>
+              <Link key={e.id} href={`${location}${e.documentId}`}>
+                <Card className="py-4 cursor-pointer" shadow="sm">
+                  <CardBody className="overflow-visible py-2">
+                    <Image
+                      alt="Hinh anh xe"
+                      className="object-cover rounded-xl"
+                      src={`${BASE_API_URL}${e.thong_tin_xe_common?.hinh_xe_dai_dien?.formats?.thumbnail?.url}`}
+                      width={270}
+                    />
+                  </CardBody>
+                  <CardHeader className="pb-0 pt-2 px-4 flex-col items-start">
+                    <h4 className="font-bold text-large">
+                      {e.thong_tin_xe_common.ten_xe}
+                    </h4>
+                    <p className="text-tiny uppercase font-bold">
+                      {e.thong_tin_xe_common.gia_thue_theo_gio}/giờ
+                    </p>
+                    <small className="text-default-500">
+                      {e.thong_tin_xe_common.so_cho_ngoi} chỗ
+                    </small>
+                  </CardHeader>
+                </Card>
+              </Link>
             ))}
           </div>
           <br />
