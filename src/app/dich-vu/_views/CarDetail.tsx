@@ -34,7 +34,7 @@ export default function CarDetail({ carDocumentId }: Props) {
         setCar(data);
       })
       .finally(() => setLoading(false));
-  }, []);
+  }, [location]);
 
   return (
     <Section className="">
