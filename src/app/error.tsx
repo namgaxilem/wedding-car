@@ -1,5 +1,12 @@
-'use client'
+"use client";
 
-export default function Error() {
-  return <>error roi</>
+import { Section } from "@/layout/Section";
+import NotFoundElement from "./_views/NotFoundElement";
+
+export default function ErrorPage() {
+  return (
+    <Section>
+      <NotFoundElement />
+    </Section>
+  );
 }
