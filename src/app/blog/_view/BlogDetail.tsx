@@ -6,6 +6,7 @@ import { BASE_API_URL } from "@/config/config";
 import { useBlogBreadcrumb } from "@/context/BlogBreadcrumb";
 import { Section } from "@/layout/Section";
 import { Blog } from "@/types/Blog";
+import { getDateTime } from "@/utils/common";
 import { Spinner } from "@nextui-org/react";
 import Markdown from "markdown-to-jsx";
 import { usePathname } from "next/navigation";
@@ -52,7 +53,13 @@ export default function BlogDetail({ blogDocumentId }: Props) {
               alt="team work"
               className="mb-4 h-[28rem] w-full rounded-xl object-cover"
             />
-            <p className="font-medium !text-blue-500">#blog #post</p>
+            <span>
+              <span className="text-gray-500">Cập nhật lúc: </span>
+              <span className="font-medium !text-blue-500">
+                {getDateTime(blog.updatedAt)}
+              </span>
+            </span>
+
             <p
               color="blue-gray"
               className="my-4 font-black text-4xl !leading-snug"

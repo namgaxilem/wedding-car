@@ -1,3 +1,5 @@
+import dayjs from "dayjs"
+
 export function formatNumberThousandDeliminator(
   num: number | string,
   isClearBeforeFormat?: boolean
@@ -19,3 +21,7 @@ export function formatNumberThousandDeliminator(
     return 0;
   }
 }
+
+export function getDateTime(date: Date) {
+  return dayjs(date).format('DD/MM/YYYY')
+} 

@@ -4,6 +4,7 @@ import { http } from "@/api/http";
 import CommonEmpty from "@/app/_views/CommonEmpty";
 import { BASE_API_URL } from "@/config/config";
 import { Blog } from "@/types/Blog";
+import { getDateTime } from "@/utils/common";
 import { Pagination, Spinner } from "@nextui-org/react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
@@ -65,7 +66,7 @@ export default function BlogList({}: Props) {
                   </div>
                   <div className="p-4 lg:p-6 transition-all duration-300 rounded-b-2xl group-hover:bg-gray-50">
                     <span className="text-indigo-600 font-medium mb-3 block">
-                      {`${e.updatedAt}`}
+                      {`${getDateTime(e.updatedAt)}`}
                     </span>
                     <h4 className="text-xl text-gray-900 font-medium leading-8 mb-5">
                       {e.tieu_de}
