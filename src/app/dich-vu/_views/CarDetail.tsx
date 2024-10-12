@@ -36,7 +36,6 @@ export default function CarDetail({ carDocumentId }: Props) {
       .then(({ data }: { data: Car }) => {
         setCar(data);
         setCarName(data.thong_tin_xe_common?.ten_xe);
-        console.log("data", data);
       })
       .finally(() => setLoading(false));
 

@@ -10,7 +10,6 @@ export default function About() {
 
   useEffect(() => {
     http.get("/api/about").then((data) => {
-      console.log("about", data);
       setAbout(data);
     });
   }, []);

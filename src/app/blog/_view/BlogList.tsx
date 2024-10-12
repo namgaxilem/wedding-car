@@ -89,6 +89,9 @@ export default function BlogList({}: Props) {
         </div>
       </section>
 
+      <br />
+      <br />
+
       {!loading && blogs?.length && blogs.length > 0 && (
         <div className="flex w-full justify-center">
           <Pagination
