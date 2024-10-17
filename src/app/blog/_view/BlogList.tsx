@@ -6,6 +6,7 @@ import { BASE_API_URL } from "@/config/config";
 import { Blog } from "@/types/Blog";
 import { getDateTime } from "@/utils/common";
 import { Pagination, Spinner } from "@nextui-org/react";
+import { div, section } from "framer-motion/client";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -47,13 +48,13 @@ export default function BlogList({}: Props) {
         </div>
       )}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-center gap-y-8 lg:gap-y-0 flex-wrap md:flex-wrap lg:flex-nowrap lg:flex-row lg:justify-between lg:gap-x-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
           {!loading && blogs?.length && blogs.length > 0 ? (
             <>
               {blogs?.map((e) => (
                 <div
                   key={e.documentId}
-                  className="group w-full max-lg:max-w-xl lg:w-1/3 border border-gray-300 rounded-2xl"
+                  className="w-full border border-gray-300 rounded-2xl"
                 >
                   <div className="flex items-center">
                     <Link href={`/blog/${e.documentId}`} className="w-full">
